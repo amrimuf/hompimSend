@@ -355,6 +355,12 @@ export async function sendAutoReply(sessionId: any, data: any) {
                                     contactDevices: { some: { contact: { phone: phoneNumber } } },
                                 },
                             },
+                            {
+                                recipients: { has: 'all' },
+                                device: {
+                                    contactDevices: { some: { contact: { phone: phoneNumber } } },
+                                },
+                            },
                         ],
                     },
                 ],
