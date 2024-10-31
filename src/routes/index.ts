@@ -23,7 +23,7 @@ import authMiddleware from '../middleware/auth';
 const router = Router();
 
 router.get('/', (req: Request, res: Response) => {
-    res.send('Forwardin Jaya Jaya Jaya!');
+    res.send('HompimSend Jaya Jaya Jaya!');
 });
 
 router.use('/auth', authRoutes);

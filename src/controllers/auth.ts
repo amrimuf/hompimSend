@@ -243,7 +243,7 @@ export const sendVerificationEmail: RequestHandler = async (req, res) => {
                     This verification code will expire in 30 seconds. If you didn't sign up for our service, you can safely ignore this email.
                 </p>
                 <p>Best regards,</p>
-                <p>Forwardin</p>
+                <p>HompimSend</p>
             </div>
         </body>
         </html>
@@ -335,7 +335,7 @@ export const forgotPassword: RequestHandler = async (req, res) => {
             </tr>
             <tr>
                 <td align="center" bgcolor="#f4f4f4" style="padding: 20px;">
-                    <p style="color: #333333; font-size: 12px;">&copy; 2023 Forwardin</p>
+                    <p style="color: #333333; font-size: 12px;">&copy; 2023 HompimSend</p>
                 </td>
             </tr>
         </table>

@@ -49,9 +49,9 @@ export const pay: RequestHandler = async (req, res) => {
                     price: paidPrice,
                     quantity: 1,
                     name: subscriptionPlan?.name,
-                    brand: 'Forwardin',
+                    brand: 'HompimSend',
                     category: 'Subscription',
-                    merchant_name: 'Forwardin',
+                    merchant_name: 'HompimSend',
                 },
             ],
             customer_details: {

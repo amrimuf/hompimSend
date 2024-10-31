@@ -29,7 +29,7 @@ describe('------Device API------', () => {
             .send({})
             .set('Content-Type', 'application/json')
             .set('Authorization', `Bearer ${authToken}`)
-            .set('X-Forwardin-Key', accountApiKey);
+            .set('X-HompimSend-Key', accountApiKey);
 
         expect(trialResponse.body).to.have.property(
             'message',
@@ -47,7 +47,7 @@ describe('------Device API------', () => {
                 })
                 .set('Content-Type', 'application/json')
                 .set('Authorization', `Bearer ${authToken}`)
-                .set('X-Forwardin-Key', accountApiKey)
+                .set('X-HompimSend-Key', accountApiKey)
                 .expect(201);
             deviceId = response.body.data.id;
 
@@ -63,7 +63,7 @@ describe('------Device API------', () => {
                 })
                 .set('Content-Type', 'application/json')
                 .set('Authorization', `Bearer ${authToken}`)
-                .set('X-Forwardin-Key', accountApiKey)
+                .set('X-HompimSend-Key', accountApiKey)
                 .expect(500);
         });
     });
@@ -74,7 +74,7 @@ describe('------Device API------', () => {
                 .delete('/devices/')
                 .send({ deviceIds: [`${deviceId}`] })
                 .set('Authorization', `Bearer ${authToken}`)
-                .set('X-Forwardin-Key', accountApiKey)
+                .set('X-HompimSend-Key', accountApiKey)
                 .expect(200);
 
             expect(response.body).to.have.property('message', 'Device(s) deleted successfully');
@@ -85,7 +85,7 @@ describe('------Device API------', () => {
                 .delete('/devices/')
                 .send({ deviceIds: ['non-existence-device'] })
                 .set('Authorization', `Bearer ${authToken}`)
-                .set('X-Forwardin-Key', accountApiKey)
+                .set('X-HompimSend-Key', accountApiKey)
                 .expect(500);
         });
     });
@@ -94,7 +94,7 @@ describe('------Device API------', () => {
         await request(app)
             .delete('/users/delete')
             .set('Authorization', `Bearer ${authToken}`)
-            .set('X-Forwardin-Key', accountApiKey)
+            .set('X-HompimSend-Key', accountApiKey)
             .expect(200);
     });
 });

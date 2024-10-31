@@ -70,7 +70,7 @@ export const accessToken: RequestHandler = (req, res, next) => {
 };
 
 export const apiKey: RequestHandler = async (req, res, next) => {
-    const apiKey = req.header('X-Forwardin-Key');
+    const apiKey = req.header('X-HompimSend-Key');
 
     if (!apiKey) {
         return res.status(401).json({ message: 'Authentication failed: Missing API key' });

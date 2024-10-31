@@ -801,22 +801,22 @@ export const syncGoogle: RequestHandler = async (req, res) => {
                 ),
             );
 
-            const forwardinContactsData = await prisma.contact.findMany({
+            const hompimSendContactsData = await prisma.contact.findMany({
                 where: { phone: { notIn: existingGoogleContacts } },
             });
 
             // upload
-            for (let index = 0; index < forwardinContactsData.length; index++) {
+            for (let index = 0; index < hompimSendContactsData.length; index++) {
                 const newContactData = {
                     names: [
                         {
-                            givenName: forwardinContactsData[index].firstName,
-                            familyName: 'Forwardin',
+                            givenName: hompimSendContactsData[index].firstName,
+                            familyName: 'HompimSend',
                         },
                     ],
                     phoneNumbers: [
                         {
-                            value: forwardinContactsData[index].phone,
+                            value: hompimSendContactsData[index].phone,
                             type: 'mobile',
                         },
                     ],

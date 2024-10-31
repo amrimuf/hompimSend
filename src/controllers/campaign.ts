@@ -214,7 +214,7 @@ export async function sendCampaignReply(sessionId: any, data: any) {
                                     has: '*',
                                 },
                             },
-                            // all forwardin contacts
+                            // all HompimSend contacts
                             {
                                 recipients: {
                                     has: 'all',
